@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+
+<title>RedGrind | Web Application Development Consulting</title>
+<%= stylesheet_link_tag :all %>
+<%= javascript_include_tag :defaults %>
+<%= csrf_meta_tag %>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+
+   
+<!--[if IE 6]>
+<%# javascript_include_tag :pngfix %>
+<%# javascript_include_tag :menu %>
+<%# stylesheet_link_tag :ie6 %>
+<![endif]-->	
+
+<!--[if IE 7]>
+<%# stylesheet_link_tag :ie7 %>
+<![endif]-->
+
+<!--
+<script type='text/javascript' src='http://www.woothemes.com/demo/optimize/wp-includes/js/jquery/jquery.js?ver=1.4.2'></script>
+<script type='text/javascript' src='http://www.woothemes.com/demo/optimize/wp-content/themes/optimize/includes/js/superfish.js?ver=3.0.1'></script>
+<script type='text/javascript' src='http://www.woothemes.com/demo/optimize/wp-content/themes/optimize/includes/js/scripts.js?ver=3.0.1'></script>
+<script type='text/javascript' src='http://www.woothemes.com/demo/optimize/wp-content/themes/optimize/includes/js/innerfade.js?ver=3.0.1'></script>
+<script type='text/javascript' src='http://www.woothemes.com/demo/optimize/wp-content/themes/optimize/includes/js/prettyPhoto.js?ver=3.0.1'></script>
+-->
+
+<%# stylesheet_link_tag :shortcodes %>
+<%= stylesheet_link_tag 'custom' %>
+
+<style type="text/css">
+#top {background-repeat:no-repeat}
+</style>
+
+</head>
+
+<body class="home blog"> <!-- safari -->
+
+<div id="container">
+	<div id="top">
+    <div id="header">
+      <div class="col-full">
+         <div id="logo" class="fl">
+           <a href="http://www.woothemes.com/demo/optimize" title="Just another WooThemes demo">
+             <img class="title" src="http://www.woothemes.com/demo/optimize/wp-content/themes/optimize/images/logo.png" alt="Optimize" />
+           </a>                
+        
+           <h1 class="site-title"><a href="http://www.woothemes.com/demo/optimize">Optimize</a></h1>
+           <span class="site-description">Just another WooThemes demo</span>    
+        </div><!-- /#logo -->
+         
+        <ul id="nav" class="fr">
+          <li class="page_item current_page_item home_link"><a href="http://www.woothemes.com/demo/optimize">Home</a></li>
+          <li class="page_item page-item-2"><a href="http://www.woothemes.com/demo/optimize/about/" title="About">About</a></li>
+          <li class="page_item page-item-388"><a href="http://www.woothemes.com/demo/optimize/blog/" title="Blog">Blog</a></li>
+          <li class="page_item page-item-417"><a href="http://www.woothemes.com/demo/optimize/portfolio/" title="Portfolio">Portfolio</a></li>
+          <li class="page_item page-item-352"><a href="http://www.woothemes.com/demo/optimize/page-templates/" title="Page Templates">Page Templates</a>
+            <ul class='children'>
+              <li class="page_item page-item-159">
+                <a href="http://www.woothemes.com/demo/optimize/page-templates/archives/" title="Archives">Archives</a>
+              </li>
+              <li class="page_item page-item-161">
+                <a href="http://www.woothemes.com/demo/optimize/page-templates/sitemap/" title="Sitemap">Sitemap</a>
+              </li>
+              <li class="page_item page-item-303">
+                <a href="http://www.woothemes.com/demo/optimize/page-templates/full-width/" title="Full Width">Full Width</a>
+              </li>
+              <li class="page_item page-item-343">
+                <a href="http://www.woothemes.com/demo/optimize/page-templates/redirect/" title="Redirect">Redirect</a>
+              </li>
+              <li class="page_item page-item-469">
+                <a href="http://www.woothemes.com/demo/optimize/page-templates/contact-form/" title="Contact Form">Contact Form</a>
+              </li>
+            </ul>
+          </li>       
+        </ul><!-- /#nav -->         
+      </div><!-- /.col-full -->
+    </div><!-- /#header -->
+			
+		<!-- Featured Area --> 
+    <div id="featured" class="home">
+      <div class="col-full">
+      	<div class="featured-image fl">
+          <a href="http://vimeo.com/8166231" rel="prettyPhoto" title="Preview New WooFramework 2.0">
+            <img src="http://woothemes.com/demo/uploads/2009/12/browser2.png" alt="" />
+          </a>
+        	<a href="http://vimeo.com/8166231" rel="prettyPhoto" title="Preview New WooFramework 2.0" class="play"></a>
+        </div>
+        <div class="featured-content fr">
+          <h2>Slogan goes here!</h2>
+          <p>
+		        <em>
+		          This theme can showcase a product, service or portfolio and includes a great front page 
+		          for showing off the features of your product.
+		        </em>                    
+		      </p>
+          <a href="#" class="button"><span>Take A Tour</span></a>                    
+          <a href="#" class="button"><span>Purchase</span></a>                
+        </div>
+      </div>
+    </div>
+        
+		<div id="breadcrumb" class="home">
+      <div class="col-full">
+        <div class="left fl">
+					<a rel="prettyPhoto[gallery1]" href="http://www.woothemes.com/wp-content/uploads/screenshots/headlines.jpg" 
+					   title="Headlines" class="thumb">
+					   <img src="http://woothemes.com/demo/uploads/2009/12/thumb-sample.png" alt="" class="thumb" />
+					</a>
+					<a rel="prettyPhoto[gallery1]" href="http://www.woothemes.com/demo/uploads/2010/04/backstage.jpg" title="Backstage" class="thumb"><img src="http://woothemes.com/demo/uploads/2009/12/thumb-sample.png" alt="" class="thumb" /></a>
+					<a rel="prettyPhoto[gallery1]" href="http://www.woothemes.com/wp-content/uploads/screenshots/coffeebreak.jpg" title="CoffeeBreak" class="thumb"><img src="http://woothemes.com/demo/uploads/2009/12/thumb-sample.png" alt="" class="thumb" /></a>
+					<a rel="prettyPhoto[gallery1]" href="http://www.woothemes.com/wp-content/uploads/screenshots/digitalfarm.jpg" title="Digital Farm" class="thumb"><img src="http://woothemes.com/demo/uploads/2009/12/thumb-sample.png" alt="" class="thumb" /></a>
+					<a rel="prettyPhoto[gallery1]" href="http://www.woothemes.com/wp-content/uploads/screenshots/object.jpg" title="Object" class="thumb"><img src="http://woothemes.com/demo/uploads/2009/12/thumb-sample.png" alt="" class="thumb" /></a>
+        </div>
+                <div class="right fr">
+                	<h2>Product features</h2>
+                    <p>Tell everybody something about your product here and show them some screenshots to the right. This panel is optional. The image links can open up in a lightbox or you can link to another location, so you can showcase images, video or another page.</p>
+                </div>
+                <div class="fix"></div>
+			</div>
+        </div>     
+                <!-- /Featured Area --> 
+                 
+	</div><!-- /#top -->
+    
+    <div id="content">
+    <div class="col-full">
+    
+    	<!-- Twitter --> 
+		    
+		<div id="twitter">
+        	<a href="http://www.twitter.com/woothemes" title="Follow us on Twitter" class="fl" ><img src="http://www.woothemes.com/demo/optimize/wp-content/themes/optimize/images/ico-twitter.png" alt="" /></a>
+            <ul id="twitter_update_list"><li></li></ul>
+        </div>   
+                <!-- /Twitter --> 
+        
+        <!-- Optional page insert #1 --> 
+                <!-- /Optional page insert #1 --> 
+        
+        <!-- Mini Features --> 
+                <div id="mini-features">
+        
+                		        					
+
+						<div class="block">
+				                <img src="http://www.woothemes.com/demo/uploads/2009/12/ico-home-1.jpg" alt="" class="home-icon" />				
+                 
+                                                     
+                <div class="feature">
+                   <h3>Watch your site grow</h3>
+                   <p>Sed et odio libero. Vestibulum aliquet aliquet blandit. Sed non orci ut enim mattis placerat. Aenean ultrices massa id magna scelerisque quis accumsan lorem interdum. </p>
+                   <a href="http://www.woothemes.com/demo/optimize/infobox/watch-your-site-grow/ " class="btn">Read More</a>                </div>
+			</div>
+							
+                
+        		        					
+
+						<div class="block">
+				                <img src="http://www.woothemes.com/demo/uploads/2009/12/ico-home-4.jpg" alt="" class="home-icon" />				
+                 
+                                                     
+                <div class="feature last">
+                   <h3>Unlock your sites potential</h3>
+                   <p>In at tortor eget purus commodo aliquet eget non tortor. In consequat, ante id placerat iaculis, nunc erat pretium neque, at venenatis arcu ipsum ac metus. Aliquam pharetra dapibus blandit.</p>
+                   <a href="#" class="btn">Read More</a>                </div>
+			</div>
+			<div class="fix"></div>				
+                
+        		        					
+
+						<div class="block">
+				                <img src="http://www.woothemes.com/demo/uploads/2009/12/ico-home-2.jpg" alt="" class="home-icon" />				
+                 
+                                                     
+                <div class="feature">
+                   <h3>Save time on your projects</h3>
+                   <p>In at tortor eget purus commodo aliquet eget non tortor. In consequat, ante id placerat iaculis, nunc erat pretium neque, at venenatis arcu ipsum ac metus. Aliquam pharetra dapibus blandit.</p>
+                   <a href="#" class="btn">Read More</a>                </div>
+			</div>
+							
+                
+        		        					
+
+						<div class="block">
+				                <img src="http://www.woothemes.com/demo/uploads/2009/12/ico-home-3.jpg" alt="" class="home-icon" />				
+                 
+                                                     
+                <div class="feature last">
+                   <h3>Get the right tools for the job</h3>
+                   <p>In at tortor eget purus commodo aliquet eget non tortor. In consequat, ante id placerat iaculis, nunc erat pretium neque, at venenatis arcu ipsum ac metus. Aliquam pharetra dapibus blandit.</p>
+                   <a href="#" class="btn">Read More</a>                </div>
+			</div>
+			<div class="fix"></div>				
+                
+        
+            <div class="fix"></div>
+        </div><!-- /#mini-features -->
+                <!-- /Mini Features --> 
+        
+        <!-- Optional page insert #2 --> 
+                
+        <!-- /Optional page insert #2 --> 
+        
+        <!-- Info Box -->                
+                <div id="info-box">        	
+        	
+	        <!-- Info block -->                
+        	<div class="block">
+            	<img src="http://www.woothemes.com/demo/optimize/wp-content/themes/optimize/images/ico-info.png" class="icon" alt="" />
+                <h3>Who are we?</h3>
+                <p>In at tortor eget purus commodo aliquet eget non tortor. In consequat, ante id placerat iaculis, nunc erat pretium neque, at venenatis arcu ipsum ac metus. Aliquam pharetra dapibus blandit.</p>
+                                <a href="#"></a>            </div>
+	        <!-- /Info Block -->                
+            
+	        <!-- Testimonials -->                
+            <div class="block last">
+                <img src="http://www.woothemes.com/demo/optimize/wp-content/themes/optimize/images/ico-quotes.png" class="icon" alt="" />            
+                <h3>Customer Feedback</h3>
+            	<div class="quotes">
+
+		        		        		
+		                        	<div class="quote">
+                        <blockquote><p>Optimize is an awesome business theme that is very easy to setup and customize. I just love it!</p>
+</blockquote>
+                        <cite>Joe Bloggs &nbsp;-&nbsp;<a href="http://www.woothemes.com">http://www.woothemes.com</a></cite>
+                    </div>
+	            		
+		                        	<div class="quote">
+                        <blockquote><p>In at tortor eget purus commodo aliquet eget non tortor. In consequat, ante id placerat iaculis, nunc erat pretium neque, at venenatis arcu ipsum ac metus. Aliquam pharetra dapibus blandit.</p>
+</blockquote>
+                        <cite>Magnus &nbsp;-&nbsp;<a href="http://www.jepson.no">http://www.jepson.no</a></cite>
+                    </div>
+	            	            
+                </div>
+            </div>
+	        <!-- /Testimonials -->                
+            
+            <div class="fix"></div>
+        </div><!-- /#info-box -->
+                <!-- /Info Box -->                
+
+    </div><!-- /.col-full -->
+    </div><!-- /#content -->
+		
+	<div id="footer">
+    <div class="col-full">
+    
+        <!-- Footer Widget Area Starts -->
+        <div id="footer-widgets">
+    
+            <div class="block">
+                <div id="meta-3" class="widget widget_meta"><h3>Meta</h3>			<ul>
+						<li><a href="http://www.woothemes.com/demo/optimize/wp-login.php">Log in</a></li>
+			<li><a href="http://www.woothemes.com/demo/optimize/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.woothemes.com/demo/optimize/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+</div>		           
+            </div>
+            <div class="block">
+                <div id="archives-4" class="widget widget_archive"><h3>Archives</h3>		<ul>
+			<li><a href='http://www.woothemes.com/demo/optimize/2009/03/' title='March 2009'>March 2009</a></li>
+	<li><a href='http://www.woothemes.com/demo/optimize/2008/12/' title='December 2008'>December 2008</a></li>
+	<li><a href='http://www.woothemes.com/demo/optimize/2008/03/' title='March 2008'>March 2008</a></li>
+	<li><a href='http://www.woothemes.com/demo/optimize/2008/02/' title='February 2008'>February 2008</a></li>
+	<li><a href='http://www.woothemes.com/demo/optimize/2008/01/' title='January 2008'>January 2008</a></li>
+		</ul>
+</div>		           
+            </div>
+            <div class="block">
+                		<div id="recent-posts-3" class="widget widget_recent_entries">		<h3>Recent Posts</h3>		<ul>
+				<li><a href="http://www.woothemes.com/demo/optimize/2009/03/18/testing-the-elements/" title="Testing The Elements">Testing The Elements</a></li>
+				<li><a href="http://www.woothemes.com/demo/optimize/2009/03/18/molestie-innonummy-libero/" title="Molestie innonummy Libero">Molestie innonummy Libero</a></li>
+				<li><a href="http://www.woothemes.com/demo/optimize/2009/03/18/id-iaculis-id-pulvinar-ut-imperdiet/" title="Id iaculis id, pulvinar ut imperdiet">Id iaculis id, pulvinar ut imperdiet</a></li>
+				<li><a href="http://www.woothemes.com/demo/optimize/2009/03/18/convallis-nec-donec/" title="Convallis Nec Donec">Convallis Nec Donec</a></li>
+				<li><a href="http://www.woothemes.com/demo/optimize/2009/03/18/suscipit-lorem-tristique/" title="Suscipit lorem tristique">Suscipit lorem tristique</a></li>
+				</ul>
+		</div>		           
+            </div>
+            <div class="block last">
+                <div id="text-3" class="widget widget_text"><h3>Text Widget</h3>			<div class="textwidget">This is the footer which has 4 widgetized colums for you to add your favorite widgets. Go to WP Admin -> Apperance -> Widgets to add them.</div>
+		</div>		           
+            </div>
+
+	        <div class="fix"></div>       
+        </div>
+        <!-- Footer Widget Area Ends -->
+
+        <div id="footer-credits">
+	
+		<div id="copyright" class="col-left">
+                            <p>&copy; <%= Time.now.year %> RedGrind, LLC. All Rights Reserved.</p>
+            		</div>
+		
+		<div id="credit" class="col-right">
+            				<p>a <a href="http://www.redgrind.com">RedGrind, LLC</a> Production.</p>
+            		</div>
+
+		</div><!-- /#footer-widgets -->
+		
+	</div><!-- /.col-full -->
+	</div><!-- /#footer -->
+	
+</div><!-- /#container -->
+
+
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/woothemes.json?callback=twitterCallback2&amp;count=4"></script>
+
+</body>
+</html>
+
+
+<%# yield %>
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redgrind</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+
+</body>
+</html>
+-->

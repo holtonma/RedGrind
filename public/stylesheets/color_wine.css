@@ -1,0 +1,16 @@
+.latest_project{
+   background: url(../images/colors/wine/home_bg.png) repeat-x;
+   background-position: 0px 0px;
+ }
+ 
+.project{
+ background: url(../images/colors/wine/bg_repeat2.png) repeat-x;
+ }
+ 
+.secondary_page_bg{
+ background: url(../images/colors/wine/secondary_page_bg.jpg) repeat-x;
+ }
+ 
+.category_illustration{
+ background: url(../images/colors/wine/category_illustration_bg.jpg) no-repeat;
+ }
