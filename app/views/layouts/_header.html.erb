@@ -1,0 +1,35 @@
+<div class="header">
+	<div class="header_content">
+  	<a href="index.html">
+	    <img class="logo png" width="205" height="40" src="images/logo.png" 
+	         alt="RedGrind Screencast and Web Application Development" title="Go to RedGrind Homepage" />
+	  </a>
+        
+    <ul class="main_menu">
+    	<li class="<% if controller.controller_name == 'home'%>selected_page<% end %>">
+      	<div class="selected">
+      		<div class="selected_left"></div>
+          	<div class="selected_middle">
+      			<a class="homepage" href="index"></a>
+          </div>
+         	<div class="selected_right"></div>
+        </div>
+      </li>
+    	<li class="<% if controller.controller_name == 'home'%>selected_page<% end %>">
+    	  <a href="/about">About us</a>
+    	</li>
+      <li class="<% if controller.controller_name == 'work'%>selected_page<% end %>">
+        <a href="/work">Work</a>
+      </li>
+      <li class="<% if controller.controller_name == 'services'%>selected_page<% end %>">
+        <a href="/services">Services</a>
+      </li>
+      <li class="<% if controller.controller_name == 'contact'%>selected_page<% end %>">
+        <a href="/contact">Contact</a>
+      </li>
+      <li class="<% if controller.controller_name == 'sessions'%>selected_page<% end %>">
+        <a href="/login">Login </a>
+      </li>
+    </ul><!-- /.main_menu -->  
+  </div><!-- /.header_content -->    	
+</div><!-- /.HEADER -->
