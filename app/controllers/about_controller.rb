@@ -1,6 +1,6 @@
 class AboutController < ApplicationController
   
-  layout 'about_us'
+  layout 'application'
   
   def index
   end

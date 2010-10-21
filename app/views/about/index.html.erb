@@ -1,2 +1,42 @@
-<h1>About#index</h1>
-<p>Find me in app/views/about/index.html.erb</p>
+<div class="secondary_page_bg">
+	<div class="category_illustration">
+    <div class="punchline_about">
+      <h2>Need a web application or screencast?</h2>
+      <p>We kill it, so you can eat</p>
+    </div>        
+    <img class="drawing_tablet" src="images/drawing_tablet.png" width="317" height="159" alt="About us" />
+  </div>
+</div>
+<%# render 'about/'%>
+
+<%= render 'layouts/sub_menu' %>
+
+<div class="content">
+	<div class="secondary_pages_content">
+	  <h1>We are RedGrind</h1>
+    <p class="subtitle">a web application and screencasting boutique</p>
+    <div class="clear_container"></div>
+    
+    <div class="two_columns">
+      <div class="text">
+        <h5>About Us</h5>
+        <p>Mark Holton</p>
+      </div>
+      
+      <%= render 'about/services' %>
+    </div> <!-- /two_columns -->
+    
+    <div class="clear_container"></div><br /><br />
+    
+    <div class="one_column">
+      <%= render 'about/our_process' %>
+    </div>
+    
+    <%= render 'about/ruby_on_rails'%>
+    <div class="clear_container"></div><br /><br />
+  </div><!-- /secondary_pages_content -->
+    
+  <div class="clear_container"></div>
+    
+</div>
+<!-- .CONTENT -->
