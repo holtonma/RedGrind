@@ -122,25 +122,31 @@ p, cite, .the_process{
 .logo{
  margin: 18px 0 0 0;
  float: left;
- }
+}
  
 .main_menu{
  float: right;
  margin: 29px 0 0 0;
- }
+}
  
 .main_menu li{
  float: left;
  margin: 0 20px 0 20px;
- }
+}
  
 .main_menu li .selected_middle a:hover{
  cursor: default;
- }
+}
  
 .main_menu li.selected_page{
- margin: 0 7px 0 7px;
- }
+  margin:  -9px 0px 0 0px;
+  padding: 8px 12px;
+  border: 1px solid #464646;
+  background-color: #111;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+	border-radius: 5px; 
+}
  
 .homepage{
  display: block;
@@ -148,7 +154,7 @@ p, cite, .the_process{
  height: 13px;
  background: url(../images/home.png) no-repeat;
  float: left;
- }
+}
  
 .homepage:hover{
  width: 14px;

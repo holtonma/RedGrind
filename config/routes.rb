@@ -1,4 +1,10 @@
 Redgrind::Application.routes.draw do
+  get "contact/index"
+
+  get "work/index"
+
+  get "services/index"
+
   get "about/index"
 
   # The priority is based upon order of creation:
