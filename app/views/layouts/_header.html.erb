@@ -10,8 +10,11 @@
       	<a class="homepage" href="/"></a>
       </li>
     	<li class="<% if controller.controller_name == 'about'%>selected_page<% end %>">
-    	  <a href="/about">About us</a>
+    	  <a href="/about">About</a>
     	</li>
+      <li class="<% if controller.controller_name == 'screencast'%>selected_page<% end %>">
+        <a href="/screencasts">Screencasts</a>
+      </li>
       <li class="<% if controller.controller_name == 'work'%>selected_page<% end %>">
         <a href="/work">Work</a>
       </li>

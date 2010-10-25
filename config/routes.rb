@@ -1,4 +1,6 @@
 Redgrind::Application.routes.draw do
+  get "screencast/index"
+
   get "contact/index"
 
   get "work/index"
@@ -14,11 +16,12 @@ Redgrind::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
   
-  match 'about'    => 'about#index'
-  match 'contact'  => 'contact#index'
-  match 'work'     => 'work#index'
-  match 'services' => 'services#index'
+  match 'about'       => 'about#index'
+  match 'contact'     => 'contact#index'
+  match 'work'        => 'work#index'
+  match 'services'    => 'services#index'
   
+  resources :screencasts
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
