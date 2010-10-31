@@ -1,8 +1,9 @@
 <div class="header">
 	<div class="header_content">
   	<a href="/">
-	    <img class="logo png" width="205" height="40" src="images/logo.png" 
-	         alt="RedGrind Screencast and Web Application Development" title="Go to RedGrind Homepage" />
+	    <%= image_tag("logo.png", :size => "205x40", 
+	        :alt => "RedGrind Screencast and Web Application Development",
+	        :class => "logo png", :title => "Go to RedGrind Homepage") %>        
 	  </a>
         
     <ul class="main_menu">
@@ -25,8 +26,19 @@
         <a href="/contact">Contact</a>
       </li>
       <li class="<% if controller.controller_name == 'sessions'%>selected_page<% end %>">
-        <a href="/login">Login </a>
+        <% if user_signed_in? %>  
+          <%= link_to "Sign out", destroy_user_session_path %>  
+        <% else %>  
+          <%# link_to "Sign up", new_user_registration_path %>  
+          <%= link_to "Login", new_user_session_path %> 
+          <%# current_user.email %> 
+        <% end %>
       </li>
     </ul><!-- /.main_menu -->  
-  </div><!-- /.header_content -->    	
+  </div><!-- /.header_content --> 
+  <% if user_signed_in? %>
+    <div class="subnav">
+      <span>Welcome back, <%= current_user.email %>!</span>
+    </div>
+  <% end %>   	
 </div><!-- /.HEADER -->
