@@ -1,12 +1,8 @@
 Redgrind::Application.routes.draw do
   get "screencast/index"
-
   get "contact/index"
-
   get "work/index"
-
   get "services/index"
-
   get "about/index"
 
   # The priority is based upon order of creation:
@@ -22,6 +18,9 @@ Redgrind::Application.routes.draw do
   match 'services'    => 'services#index'
   
   resources :screencasts
+  
+  devise_for :users
+  
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)

@@ -19,4 +19,6 @@ Redgrind::Application.configure do
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
+  
+  config.action_mailer.default_url_options = { :host => 'localhost:2011' }  
 end
