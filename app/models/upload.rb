@@ -1,5 +1,6 @@
 class Upload < ActiveRecord::Base
-  LOCAL_STORAGE_DIRECTORY = Rails.root.join('tmp', 'uploads')
+  LOCAL_STORAGE_DIRECTORY = Rails.root.join('tmp') #'uploads'
+  # #{RAILS_ROOT}/tmp/myfile_#{Process.pid}
   S3_ROOT_URL = 'http://s3.amazonaws.com/redgrind/'
 
   after_save :upload_to_s3 #:create_job
