@@ -1,4 +1,6 @@
 Redgrind::Application.routes.draw do
+  resources :uploads
+  
   get "screencast/index"
   get "contact/index"
   get "work/index"

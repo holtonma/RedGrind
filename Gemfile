@@ -10,6 +10,9 @@ gem 'pg'
 gem 'nokogiri'
 gem 'devise'
 gem 'memcached'
+gem 'aws-s3', '0.6.2', :require => 'aws/s3'
+gem 'delayed_job'
+
 #gem 'declarative_authorization'
 
 # To use debugger (not working for ruby 1.9.* yet)

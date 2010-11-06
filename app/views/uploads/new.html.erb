@@ -1,0 +1,12 @@
+<title>Upload a file:</title>
+
+<% form_for @upload, :html => { :multipart => true } do |f| %>
+  <p>
+    <%= f.file_field :file %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', uploads_path %>
