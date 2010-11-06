@@ -35,6 +35,8 @@ GEM
       mime-types
       xml-simple
     bcrypt-ruby (2.1.2)
+    bson (1.1.2)
+    bson_ext (1.1.2)
     builder (2.1.2)
     daemons (1.1.0)
     delayed_job (2.0.3)
@@ -52,6 +54,13 @@ GEM
       treetop (~> 1.4.8)
     memcached (1.0.2)
     mime-types (1.16)
+    mongo (1.0.9)
+      bson (>= 1.0.5)
+    mongoid (2.0.0.beta.19)
+      activemodel (~> 3.0)
+      mongo (= 1.0.9)
+      tzinfo (~> 0.3.22)
+      will_paginate (~> 3.0.pre)
     nokogiri (1.4.3.1)
     pg (0.9.0)
     polyglot (0.3.1)
@@ -81,6 +90,7 @@ GEM
     tzinfo (0.3.23)
     warden (0.10.7)
       rack (>= 1.0.0)
+    will_paginate (3.0.pre2)
     xml-simple (1.0.12)
 
 PLATFORMS
@@ -88,9 +98,11 @@ PLATFORMS
 
 DEPENDENCIES
   aws-s3 (= 0.6.2)
+  bson_ext
   delayed_job
   devise
   memcached
+  mongoid (= 2.0.0.beta.19)
   nokogiri
   pg
   rails (= 3.0.1)
