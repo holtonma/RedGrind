@@ -8,6 +8,6 @@ class Contact
   field :company
   field :deadline, :type => Date
   
-  validates_presence_of :name, :email, :message
+  validates_presence_of :name, :email
   
 end

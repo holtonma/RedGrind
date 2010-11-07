@@ -10,36 +10,74 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :budget %><br />
-    <%= f.text_field :budget %>
-  </div>
-  <div class="field">
-    <%= f.label :message %><br />
-    <%= f.text_area :message %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :company %><br />
-    <%= f.text_field :company %>
-  </div>
-  <div class="field">
-    <%= f.label :deadline %><br />
-    <%= f.date_select :deadline %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <table class="contact_form" cellpadding="0" cellspacing="0">
+    <tr>
+      <td style="width:461px">
+      	<%= f.label :name, "Your name (required):" %>
+        <div class="form_input odd">
+          <div class="input_left"></div>
+          <%= f.text_field :name, :class => "input_middle required" %>
+          <div class="input_right"></div>
+        </div>
+      </td>      
+      <td style="width:461px">
+      	<%= f.label :email, "Your e-mail (required):" %>
+        <div class="form_input">
+        	<div class="input_left"></div>
+          <%= f.text_field :email, :class => "input_middle required" %>
+          <div class="input_right"></div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="width:461px">
+      	<%= f.label :phone, "Your phone number: " %>
+        <div class="form_input odd">
+        	<div class="input_left"></div>
+          <%= f.text_field :phone, :class => "input_middle" %>
+          <div class="input_right"></div>
+        </div>
+      </td>          
+      <td style="width:461px">
+        <%= f.label :company, "Company: " %>
+        <div class="form_input">
+        	<div class="input_left"></div>
+          <%= f.text_field :company, :class=>"input_middle" %>
+          <div class="input_right"></div>
+        </div>
+      </td>
+    </tr>
+    <tr>  
+      <td style="width:461px">
+      	<%= f.label :budget, "Budget: " %>
+        <div class="form_input odd">
+          <div class="input_left"></div>
+          <%= f.text_field :budget, :class=> "input_middle" %>
+          <div class="input_right"></div>
+        </div>
+      </td>          
+      <td style="width:461px">
+        <%= f.label :deadline, "Deadline: " %>
+        <div class="form_input">
+        	<%= f.date_select :deadline, :class => "input_middle" %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+    	<td style="width:922px" colspan="2">        
+      	<%= f.label :message, "Your message (required): " %>
+        <div class="form_textarea">
+        	<div class="textarea_left"></div>
+          <%= f.text_area :message, :id=>"message", :name=>"message", 
+                          :class=>"textarea_middle required", :rows=>"5", :cols=>"103" %>
+          <div class="textarea_right"></div>
+        </div>    
+      </td>
+    </tr>
+    <tr>
+    	<td style="width:922px" colspan="2">
+    	  <%= f.submit :id=>"send", :class=>"submit", :value=>"" %>
+  	  </td>
+    </tr>
+  </table>
 <% end %>

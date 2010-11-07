@@ -22,7 +22,7 @@
     <td><%= contact.message %></td>
     <td><%= contact.email %></td>
     <td><%= contact.company %></td>
-    <td><%= contact.deadline %></td>
+    <td><%# contact.deadline %></td>
     <td><%= link_to 'Show', contact %></td>
     <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
     <td><%= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete %></td>
