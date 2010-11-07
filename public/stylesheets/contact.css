@@ -8,7 +8,16 @@
 #contact-page ol.forms li .error{font-size:12px;display:block;margin-left:120px;color:red;}
 #contact-page ol.forms li.textarea .error{display:block; margin-left:120px}
 #contact-page ol.forms li.screenReader{margin-bottom:0;}
-#contact-page ol.forms li.buttons .submit{margin: 15px 0 0 120px; background:#f0f0f0; color:#333; font-size:12px; text-transform:uppercase; border:none; padding:4px 25px 4px 15px;}
+#contact-page ol.forms li.buttons .submit{
+	margin: 15px 0 0 120px; 
+	background:#f0f0f0; 
+	color:#333; 
+	font-size:12px; 
+	text-transform:uppercase; 
+	border:none; 
+	padding:4px 25px 4px 15px;
+	cursor:pointer;
+}
 #contact-page ol.forms li.buttons .submit:hover{background:#06a0f0; color:#fff; cursor:pointer;}
 #contact-page ol.forms li.buttons .submit:active{left:-1px;position:relative;top:-1px;}
 #contact-page ol.forms li.inline input{width:auto;margin-left:120px;}

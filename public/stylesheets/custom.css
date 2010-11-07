@@ -36,3 +36,7 @@ div.basic_content{
 	text-align:center;
 }
 
+.submit:hover{
+	cursor:pointer;
+}
+
