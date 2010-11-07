@@ -1,10 +1,9 @@
 Redgrind::Application.routes.draw do
   resources :contacts
-
   resources :uploads
   
   get "screencast/index"
-  get "contact/index"
+  #get "contact/index"
   get "work/index"
   get "services/index"
   get "about/index"
@@ -17,7 +16,7 @@ Redgrind::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
   
   match 'about'       => 'about#index'
-  match 'contact'     => 'contact#index'
+  #match 'contact'     => 'contact#index'
   match 'work'        => 'work#index'
   match 'services'    => 'services#index'
   
