@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  screencast_id: 1
+  name: MyString
+  path: MyString
+  extension: MyString
+
+two:
+  screencast_id: 1
+  name: MyString
+  path: MyString
+  extension: MyString

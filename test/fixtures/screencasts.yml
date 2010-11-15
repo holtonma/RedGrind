@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  published_on: 2010-11-14 18:29:37
+  small_screenshot: MyString
+  large_screenshot: MyString
+  cost_in_pennies: 1
+
+two:
+  name: MyString
+  description: MyText
+  published_on: 2010-11-14 18:29:37
+  small_screenshot: MyString
+  large_screenshot: MyString
+  cost_in_pennies: 1

@@ -20,7 +20,13 @@ module Redgrind
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
-
+    
+    # Configure generators values. Many other options are available, be sure to check the documentation.
+    # need to make sure :active_record is the default used as using Mongoid in this app  
+    config.generators do |g|  
+      g.orm :active_record
+    end
+        
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 

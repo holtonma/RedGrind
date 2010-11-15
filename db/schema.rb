@@ -10,7 +10,60 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101106042033) do
+ActiveRecord::Schema.define(:version => 20101115024118) do
+
+  create_table "authorships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "screencast_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "movie_files", :force => true do |t|
+    t.integer  "screencast_id"
+    t.string   "name"
+    t.string   "path"
+    t.string   "extension"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "screencast_categories", :force => true do |t|
+    t.integer  "screencast_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "screencast_tags", :force => true do |t|
+    t.integer  "screencast_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "screencasts", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "published_on"
+    t.string   "small_screenshot"
+    t.string   "large_screenshot"
+    t.integer  "cost_in_pennies"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "uploads", :force => true do |t|
     t.string   "local_path"
