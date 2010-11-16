@@ -1,0 +1,98 @@
+<%= form_for @screencast do |f| %>
+  <% if @screencast.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@screencast.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul class="errors">
+      <% @screencast.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <table class="contact_form" cellpadding="0" cellspacing="0">
+    <tr>
+      <td style="width:461px">
+      	<%= f.label :name, "Screencast name (required):" %>
+        <div class="form_input odd">
+          <div class="input_left"></div>
+          <%= f.text_field :name, :class => "input_middle required" %>
+          <div class="input_right"></div>
+        </div>
+      </td>      
+      <td style="width:461px">
+      	<%= f.label :small_screenshot, "Small screenshot:" %>
+        <div class="form_input">
+        	<div class="input_left"></div>
+          <%= f.text_field :small_screenshot, :class => "input_middle required" %>
+          <div class="input_right"></div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="width:461px">
+      	<%= f.label :large_screenshot, "Large screenshot: " %>
+        <div class="form_input odd">
+        	<div class="input_left"></div>
+          <%= f.text_field :large_screenshot, :class => "input_middle" %>
+          <div class="input_right"></div>
+        </div>
+      </td>          
+    </tr>
+    <tr>  
+      <td style="width:461px">
+      	<%= f.label :cost_in_pennies, "Cost (pennies): " %>
+        <div class="form_input odd">
+          <div class="input_left"></div>
+          <%= f.text_field :cost_in_pennies, :class=> "input_middle" %>
+          <div class="input_right"></div>
+        </div>
+      </td>          
+      <td style="width:461px">
+        <%= f.label :published_on, "Published Date: " %>
+        <div class="form_input">
+        	<%= f.date_select :published_on, :class => "input_middle" %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+    	<td style="width:922px" colspan="2">        
+      	<%= f.label :description, "Description (required): " %>
+        <div class="form_textarea">
+        	<div class="textarea_left"></div>
+          <%= f.text_area :description, :id=>"description", :name=>"description", 
+                          :class=>"textarea_middle required", :rows=>"5", :cols=>"103" %>
+          <div class="textarea_right"></div>
+        </div>    
+      </td>
+    </tr>
+    <tr>
+      <td style="width:922px;" colspan="2">
+        <h2>Categories</h2>
+        <% for category in Category.all %>
+          <span>
+            <%= check_box_tag 'screencast[category_ids][]', category.id, 
+                  @screencast.categories.include?(category) %> <%= category.name %> 
+          </span> &nbsp;&nbsp;
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td style="width:922px;" colspan="2">
+        <h2>Tags</h2>
+        <% for tag in Tag.all %>
+          <span>
+            <%= check_box_tag 'screencast[tag_ids][]', tag.id, 
+                  @screencast.tags.include?(tag) %> <%= tag.name %> 
+          </span> &nbsp;&nbsp;
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+    	<td style="width:922px" colspan="2">
+    	  <%= f.submit :id=>"send", :value=>"Upload Screencast" %>
+  	  </td>
+    </tr>
+  </table>
+<% end %>

@@ -2,7 +2,7 @@ Redgrind::Application.routes.draw do
   resources :contacts
   resources :uploads
   
-  get "screencast/index"
+  #get "screencast/index"
   #get "contact/index"
   get "work/index"
   get "services/index"

@@ -1,9 +1,133 @@
-<h1>Screencast#index</h1>
-<p>Find me in app/views/screencast/index.html.erb</p>
+<div class="secondary_page_bg">
+	<div class="category_illustration">
+    <img class="laptop png" src="/images/laptop.png" width="379" height="113" alt="About us" />
+  	<div class="punchline_work">
+      <h2>Selection of our most appreciated works</h2>
+      <p style="color:#BBB;">If you like what you see get in touch with us!</p>
+    </div>
+  </div> <!-- .project -->
+</div> <!-- .LATEST_PROJECT -->
 
-<script type="text/javascript" src="http://cdn.sublimevideo.net/js/p2p46ypj.js"></script>
+<div class="sec_menu">
+	<div class="sec_menu_content">
+  	<ul class="secondary_menu">
+    	<li><span>Category:</span></li>
+      <li><a href="#">All</a></li>
+      <li class="sec_menu_selected">
+        <div class="sec_menu_selected_left"></div>
+        <div class="sec_menu_selected_middle">Web</div>
+        <div class="sec_menu_selected_right"></div>
+      </li>
+      <li><a href="#">Productivity</a></li>
+      <li><a href="#">Rails</a></li>
+    </ul>
+  </div> <!-- .sec_menu_content -->
+</div>
+<!-- .SEC_MENU -->
 
-<video class="sublime" width="640" height="360" poster="video-poster.jpg" preload="none">
-  <source src="http://yoursite.com/video.mp4" />
-  <source src="http://yoursite.com/video.ogv" />
-</video>
+<div class="content">
+  <h1>RedGrind Screencasts</h1>
+	<div class="secondary_pages_content">
+	  <% num = 0 %>
+	  <% for screencast in @screencasts %>
+	    <% num += 1 %>
+	    <div class="work_project <% if num%3 == 0 %>last_project<% end %>"> 
+	      <!--
+      	<a class="project_hover" href="images/projects/project1_lightbox.jpg" rel="lightbox[roadtrip1]" title="Online electronics shop">&nbsp;</a>
+      	<%# link_to ""%>
+      	-->
+      	<!--
+      	<a href="images/projects/project2_lightbox.jpg" rel="lightbox[roadtrip1]" title="Online electronics shop"></a>
+      	-->
+      	<%# link_to "", "#{@s3base}/#{screencast.small_screenshot}", :class => "project_title" %>
+      	<%= image_tag "#{@s3base}/#{screencast.small_screenshot}", :alt => screencast.name %>
+      	<%= link_to "#{screencast.name}", screencast, :class => "project_title" %>
+        <p><%= screencast.description %></p>
+      </div> <!-- .work_project -->
+      
+      <% if num%3 == 0 %>
+        <div class="clear_container"></div><br /><br />
+      <% end %>
+	  <% end %>
+	  
+	  <!--
+    <div class="work_project"> 
+    	<a class="project_hover" href="images/projects/project1_lightbox.jpg" rel="lightbox[roadtrip1]" title="Online electronics shop">&nbsp;</a>
+    	<a href="images/projects/project2_lightbox.jpg" rel="lightbox[roadtrip1]" title="Online electronics shop"></a>
+    	<img src="http://s3.amazonaws.com/redgrind/screencasts/images/project1.jpg" alt="Name of the project" />
+      <a class="project_title" href="#">Online electronics shop</a>
+      <p>We’ve just finished the new awesome project. It has been a great time for us these months.</p>
+    </div> 
+        
+    <div class="work_project">
+    	<a class="project_hover" href="images/projects/project1_lightbox.jpg" rel="lightbox[roadtrip2]" title="Online electronics shop"></a>
+    	<a href="images/projects/project2_lightbox.jpg" rel="lightbox[roadtrip2]" title="Online electronics shop"></a>
+    	<img src="http://s3.amazonaws.com/redgrind/screencasts/images/project2.jpg" alt="Name of the project" />
+        <a class="project_title" href="#">Fresh Foods inc.</a>
+        <p>We’ve just finished the new awesome project. It has been a great time for us these months.</p>
+    </div>
+    
+    
+    <div class="work_project last_project">
+    	<a class="project_hover" href="images/projects/project1_lightbox.jpg" rel="lightbox[roadtrip3]" title="Online electronics shop"></a>
+    	<a href="images/projects/project2_lightbox.jpg" rel="lightbox[roadtrip3]" title="Online electronics shop"></a>
+    	<img src="http://s3.amazonaws.com/redgrind/screencasts/images/project3.jpg" alt="Name of the project" />
+        <a class="project_title" href="#">Interactive company</a>
+        <p>We’ve just finished the new awesome project. It has been a great time for us these months.</p>
+    </div>
+    
+    <div class="clear_container"></div>
+    <br /> <br />
+    <div class="work_project">
+    	<a class="project_hover" href="images/projects/project1_lightbox.jpg" rel="lightbox[roadtrip4]" title="Online electronics shop"></a>
+    	<a href="images/projects/project2_lightbox.jpg" rel="lightbox[roadtrip4]" title="Online electronics shop"></a>
+    	<img src="images/projects/project4.jpg" alt="Name of the project" />
+        <a class="project_title" href="#">Software App website</a>
+        <p>We’ve just finished the new awesome project. It has been a great time for us these months.</p>
+    </div>
+    
+        
+    <div class="work_project">
+    	<a class="project_hover" href="images/projects/project1_lightbox.jpg" rel="lightbox[roadtrip5]" title="Online electronics shop"></a>
+    	<a href="images/projects/project2_lightbox.jpg" rel="lightbox[roadtrip5]" title="Online electronics shop"></a>
+    	<img src="images/projects/project5.jpg" alt="Name of the project" />
+        <a class="project_title" href="#">CardCrafters microsite</a>
+        <p>We’ve just finished the new awesome project. It has been a great time for us these months.</p>
+    </div>
+    
+    
+    <div class="work_project last_project">
+    	<a class="project_hover" href="images/projects/project1_lightbox.jpg" rel="lightbox[roadtrip6]" title="Online electronics shop"></a>
+    	<a href="images/projects/project2_lightbox.jpg" rel="lightbox[roadtrip6]" title="Online electronics shop"></a>
+    	<img src="images/projects/project6.jpg" alt="Name of the project" />
+        <a class="project_title" href="#">Stylish Art Gallery</a>
+        <p>We’ve just finished the new awesome project. It has been a great time for us these months.</p>
+    </div>
+    
+    
+    <div class="clear_container"></div>
+    <br /> <br />
+    <div class="work_project">
+    	<a class="project_hover" href="images/projects/project1_lightbox.jpg" rel="lightbox[roadtrip7]" title="Online electronics shop"></a>
+    	<a href="images/projects/project2_lightbox.jpg" rel="lightbox[roadtrip7]" title="Online electronics shop"></a>
+    	<img src="images/projects/project7.jpg" alt="Name of the project" />
+        <a class="project_title" href="#">Recruitment Firm website</a>
+        <p>We’ve just finished the new awesome project. It has been a great time for us these months.</p>
+    </div>
+    
+    
+    <div class="work_project">
+    	<a class="project_hover" href="images/projects/project1_lightbox.jpg" rel="lightbox[roadtrip8]" title="Online electronics shop"></a>
+    	<a href="images/projects/project2_lightbox.jpg" rel="lightbox[roadtrip8]" title="Online electronics shop"></a>
+    	<img src="images/projects/project8.jpg" alt="Name of the project" />
+        <a class="project_title" href="#">Mobile app design</a>
+        <p>We’ve just finished the new awesome project. It has been a great time for us these months.</p>
+    </div>
+    
+</div>
+    <!-- secondary_pages_content -->
+    
+    <div class="clear_container"></div>
+    
+</div>
+<!-- .CONTENT -->
