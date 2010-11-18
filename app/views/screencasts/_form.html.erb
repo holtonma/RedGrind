@@ -1,4 +1,5 @@
-<%= form_for @screencast do |f| %>
+
+<%= form_for @screencast, :html => { :multipart => true } do |f| %>  
   <% if @screencast.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@screencast.errors.count, "error") %> prohibited this contact from being saved:</h2>
@@ -37,8 +38,36 @@
         	<div class="input_left"></div>
           <%= f.text_field :large_screenshot, :class => "input_middle" %>
           <div class="input_right"></div>
+          <div><%# f.file_field :mov %></div>
         </div>
-      </td>          
+      </td>
+      
+      
+      <%#
+      t.integer  "screencast_id"
+      t.string   "name"
+      t.string   "path"
+      t.string   "extension"
+      t.datetime "created_at"
+      t.datetime "updated_at"
+      %>
+      
+      <td style="width:461px">
+      	<%= f.label :movie_files, "Movies:" %>
+        <div>
+          <!-- file_field_tag 'user_pic', :accept => 'image/png,image/gif,image/jpeg' -->
+          <%# file_field_tag 'screencast[file]' %> 
+          <% f.fields_for :movie_files do |movie_form| %>
+            <%= movie_form.file_field :path %>
+            <%= movie_form.hidden_field :extension, :value => ".mov" %>
+          <% end %>
+        </div>
+        <div>
+          .m4v: <%# file_field_tag, 'screencast[movie_file_ids][]', 'm4v' %>
+        </div>   
+      </td>  
+      
+       
     </tr>
     <tr>  
       <td style="width:461px">

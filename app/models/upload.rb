@@ -1,14 +1,14 @@
 class Upload < ActiveRecord::Base
   LOCAL_STORAGE_DIRECTORY = Rails.root.join('tmp') #'uploads'
   # #{RAILS_ROOT}/tmp/myfile_#{Process.pid}
-  S3_ROOT_URL = 'http://s3.amazonaws.com/redgrind/'
+  S3_ROOT_URL = 'http://s3.amazonaws.com/redgrind/screencasts/'
 
   after_save :upload_to_s3 #:create_job
 
   def self.store_locally(uploaded_data)
     file_path = LOCAL_STORAGE_DIRECTORY.join(uploaded_data.original_filename)
     File.open(file_path, 'wb+') { |file| file.write(uploaded_data.read) }
-
+    
     file_path.to_s
   end
 

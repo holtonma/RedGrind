@@ -9,6 +9,7 @@ class ScreencastsController < ApplicationController
   
   def new
     @screencast = Screencast.new
+    @screencast.movie_files.build
   end
   
   def edit
@@ -16,10 +17,15 @@ class ScreencastsController < ApplicationController
   end
   
   def create
-    #raise params.to_yaml
+    #raise params[:screencast][:movie_files_attributes]["0"][:path].to_s
+    mov_file = params[:screencast][:movie_files_attributes]["0"][:path]
     @screencast = Screencast.new(params[:screencast])
+    
     if @screencast.save
       flash[:notice] = "Successfully saved screencast"
+      #m4v_file = params[:upload][:m4vfile]
+      @upload = Upload.new(:local_path => Upload.store_locally(mov_file))
+      @upload.save!
       redirect_to @screencast
     else
       render :action => 'new'

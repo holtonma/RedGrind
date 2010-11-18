@@ -9,4 +9,6 @@ class Screencast < ActiveRecord::Base
   
   has_many :movie_files
   
+  accepts_nested_attributes_for :movie_files
+  
 end
