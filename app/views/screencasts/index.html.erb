@@ -42,6 +42,9 @@
       	<%# link_to "", "#{@s3base}/#{screencast.small_screenshot}", :class => "project_title" %>
       	<%= image_tag "#{@s3base}/#{screencast.small_screenshot}", :alt => screencast.name %>
       	<%= link_to "#{screencast.name}", screencast, :class => "project_title" %>
+      	<span class="cost">
+      	  <%=h number_to_currency screencast.cost_in_pennies/100, :unit => '$', :separator => ".", :delimiter => "," %>
+      	</span>
         <p><%= screencast.description %></p>
       </div> <!-- .work_project -->
       
