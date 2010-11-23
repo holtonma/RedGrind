@@ -11,4 +11,5 @@ class Screencast < ActiveRecord::Base
   
   accepts_nested_attributes_for :movie_files
   
+  #hello world 
 end
