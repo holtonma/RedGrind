@@ -14,8 +14,7 @@ gem 'aws-s3', '0.6.2', :require => 'aws/s3'
 gem 'delayed_job'
 gem "mongoid", '2.0.0.beta.19'
 gem 'bson_ext'  #C extension for handling json
-
-#gem 'declarative_authorization'
+gem "cancan"
 
 # To use debugger (not working for ruby 1.9.* yet)
 #gem 'ruby-debug'
