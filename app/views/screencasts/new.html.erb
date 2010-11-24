@@ -1,23 +1,29 @@
 
-<div class="sec_menu">
-	<div class="sec_menu_content">
-    <ul class="secondary_menu secondary_menu_contact">
-      <li>upload a new screencast</li>
-    </ul>
-  </div>
-</div>
+<% if can? :update, @screencast %>
 
-<div class="content">
-  <div class="secondary_pages_content">
-    <h1>One step closer to earning some dough</h1>
+  <div class="sec_menu">
+  	<div class="sec_menu_content">
+      <ul class="secondary_menu secondary_menu_contact">
+        <li>upload a new screencast</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="secondary_pages_content">
+      <h1>One step closer to earning some dough</h1>
     
-    <div class="contact_box">
-      <div class="contact_box_top"></div>
-      <div class="contact_box_middle">
-        <%= render 'form' %>
-      </div>
-      <div class="contact_box_bottom"></div>
-    </div> <!-- /contact_box -->
-  </div> <!-- /secondary_pages_content -->
-  <div class="clear_container"></div>
-</div><!-- .CONTENT -->
+      <div class="contact_box">
+        <div class="contact_box_top"></div>
+        <div class="contact_box_middle">
+          <%= render 'form' %>
+        </div>
+        <div class="contact_box_bottom"></div>
+      </div> <!-- /contact_box -->
+    </div> <!-- /secondary_pages_content -->
+    <div class="clear_container"></div>
+  </div><!-- .CONTENT -->
+
+<% else %>
+  <div class="content"><%= render "shared/unauthorized" %></div>
+<% end %>
