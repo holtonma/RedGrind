@@ -37,6 +37,7 @@ GEM
     bson (1.1.2)
     bson_ext (1.1.2)
     builder (2.1.2)
+    cancan (1.4.1)
     daemons (1.1.0)
     delayed_job (2.1.1)
       activesupport (~> 3.0)
@@ -99,6 +100,7 @@ PLATFORMS
 DEPENDENCIES
   aws-s3 (= 0.6.2)
   bson_ext
+  cancan
   delayed_job
   devise
   memcached
