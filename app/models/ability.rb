@@ -6,8 +6,8 @@ class Ability
  
     if user.role? :admin
       can :manage, :all
-    #elsif user.role? :cast_publisher
-    #  can :manage, [Screencast]
+    elsif user.role? :author
+      can :manage, Screencast
     else
       can :read, :all
     end
