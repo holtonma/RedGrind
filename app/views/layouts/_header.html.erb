@@ -1,11 +1,19 @@
 <div class="header">
-	<div class="header_content">
+    <% if user_signed_in? %>
+      <div class="subnav"><span>Welcome back, <%= current_user.email %>!</span></div>
+    <% else %>
+      <div class="subnav">
+        <span>
+          Welcome! &nbsp;<%= link_to "Login", user_session_path %> or <%= link_to "Sign Up", new_user_registration_path %>
+        </span>
+      </div>
+    <% end %>
+  <div class="header_content">
   	<a href="/">
 	    <%= image_tag("logo.png", :size => "205x40", 
 	        :alt => "RedGrind Screencast and Web Application Development",
 	        :class => "logo png", :title => "Go to RedGrind Homepage") %>        
 	  </a>
-        
     <ul class="main_menu">
     	<li class="<% if controller.controller_name == 'home'%>selected_page<% end %>">
       	<a class="homepage" href="/"></a>
@@ -38,9 +46,4 @@
       </li>
     </ul><!-- /.main_menu -->  
   </div><!-- /.header_content --> 
-  <% if user_signed_in? %>
-    <div class="subnav">
-      <span>Welcome back, <%= current_user.email %>!</span>
-    </div>
-  <% end %>   	
 </div><!-- /.HEADER -->

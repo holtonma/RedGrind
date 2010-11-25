@@ -2,4 +2,11 @@
 <%= render :partial => 'home/latest_project' %>
 <%= render :partial => 'home/prev_next' %>
 
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<% if flash[:alert] %>
+  <div class="error"><%= flash[:alert] %></div>
+<% end %>
+
 <%= render :partial => 'home/three_section' %>

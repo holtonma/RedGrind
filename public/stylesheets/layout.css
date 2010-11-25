@@ -35,9 +35,10 @@ p, cite, .the_process{
  }
  
 .header_content{
- height: 70px;
+ height: 60px;
  margin: 0 auto;
- }
+ padding-top:0px;
+}
  
 .latest_project{
  height: 421px;
@@ -120,13 +121,13 @@ p, cite, .the_process{
  }
  
 .logo{
- margin: 18px 0 0 0;
+ margin: 3px 0 0 0;
  float: left;
 }
  
 .main_menu{
  float: right;
- margin: 29px 0 0 0;
+ margin: 20px 0 0 0;
 }
  
 .main_menu li{

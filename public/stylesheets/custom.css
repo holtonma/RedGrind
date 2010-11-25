@@ -6,11 +6,11 @@ is easier to update
 div.subnav{
 	text-align:center;
 	font-size:0.9em;
-	margin-top:2px;
-	
+	margin-top:0px;
+	margin-bottom:0px;
 }
 div.subnav span{
-	padding:4px 8px;
+	padding:4px 8px 0;
 	background: rgba(150,150,150, 0.3);
 	-moz-border-radius-bottomright: 8px;
 	border-bottom-right-radius: 8px;
