@@ -1,0 +1,38 @@
+<div id="twitter_div" class="box">
+  <ul id="twitter_update_list">
+    <li>
+      <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script>
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 2,
+        interval: 6000,
+        width: 'auto',
+        height: 150,
+        theme: {
+          shell: {
+            background: '#ffffff',
+            color: '#333333'
+          },
+          tweets: {
+            background: '#ffffff',
+            color: '#666',
+            links: '#880000'
+          }
+        },
+        features: {
+          scrollbar: false,
+          loop: false,
+          live: false,
+          hashtags: true,
+          timestamp: true,
+          avatars: false,
+          behavior: 'all'
+        }
+      }).render().setUser('RedGrind').start();
+      </script>
+    </li>
+  </ul>
+  
+</div>

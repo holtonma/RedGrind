@@ -6,51 +6,55 @@
     <h2>News &amp; Highlights</h2>
     <p class="subtitle">What we’ve been up to lately</p>
     <div class="clear_container"></div>
-    <h6>@Twitter Commenter</h6>
-    <p>We’ve just finished the new awesome project. It has been a great time for us these months.</p>
+    <h6>We have 1 project opening now!</h6>
+    <p>
+      There is one web application development project opening available.
+      (<%= Time.now.month %>/<%= Time.now.day %>/<%= Time.now.year %>)
+      <%= link_to "Contact us", new_contact_path %>
+    </p>
     
-    <h6>Our new Blog is NOW LIVE</h6>
-    <p>The new blog is up and running. Enjoy guys!</p>
+    <h6>Check back for more screencasts daily!</h6>
+    <p>
+      Currently developing screencasts at a rate of 1 per month. 
+      <%= link_to "Contact us", new_contact_path %> to request a Screencast you'd like to see.
+      Check back often to see what has been developed!
+    </p>
+    
+    
+    
   </div><!--/ content_left -->
     
   <div class="content_middle">
-		<img class="newspaper_icon png" width="63" height="53" 
-		     src="images/clients_icon.png" alt="Clients &amp; Testimonials" />
-    <h2>Clients &amp; Testimonials</h2>
-    <p class="subtitle">What others have to say about us</p>
+		<a href="http://eyeonmajors.com">
+		  <img class="newspaper_icon png" width="46" height="54" 
+		     src="images/eom.png" alt="EyeOnMajors a RedGrind Production" />
+      <h2>EyeOnMajors.com</h2>
+    </a>
+    <p class="subtitle">a RedGrind Production</p>
     <div class="clear_container"></div>
     <img class="cite_icon png" src="images/cite_icon.png" width="21" height="19" alt="Citation" />
     <cite>
-      We partnered with RedGrind to create EyeOnMajors.com and couldn't be happier with the results.  
-      This is a valued relationship for us.
+      EyeOnMajors is the ultimate social fantasy golf game serving over 5,000 users.  Simple, engaging, fun.
+      An idea of two friends
+      brought to life by RedGrind via Ruby on Rails, utilizing Heroku's cloud to ensure scalability as more patrons
+      join their pals and office mates. Web application includes real time scoring for golf's major championships.  
     </cite>
-    <h6 class="testimonial_name">Mark Holton, EyeOnMajors.com</h6>
+    <h6 class="testimonial_name">Mark Holton</h6>
     <div class="clear_container"></div>
   </div><!-- /content_middle -->
     
   <div class="content_right">
-  	<ul>
+  	
+    <%= render "twitter" %>
+    
+    <ul>
 		  <li>
-		    <a class="social_networking_link" href="#" title="flickr">
-		      <img src="images/flickr.jpg" alt="flickr" />
-		    </a>
-		  </li>
-      <li>
-        <a class="social_networking_link" href="#" title="facebook">
-          <img src="images/facebook.jpg" alt="facebook" />
-        </a>
-      </li>
-      <li>
-        <a class="social_networking_link" href="#" title="LinkediIn">
-          <img src="images/linkedin.jpg" alt="LinkedIn" />
-        </a>
-      </li>
-      <li>
-        <a class="social_networking_link" href="#" title="twitter">
-          <img src="images/twitter.jpg" alt="twitter" />
+        <a class="social_networking_link" href="http://twitter.com/redgrind" target="_blank" title="twitter">
+          ...tweet tweet...<img src="images/twitter.jpg" alt="twitter" /> 
         </a>
       </li>
     </ul>
+    
 	</div><!-- /content_right -->
 
   <div class="clear_container"></div>

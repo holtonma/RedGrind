@@ -13,15 +13,17 @@
     	<li class="<% if controller.controller_name == 'about'%>selected_page<% end %>">
     	  <a href="/about">About</a>
     	</li>
-      <li class="<% if controller.controller_name == 'screencast'%>selected_page<% end %>">
-        <a href="/screencasts">Screencasts</a>
-      </li>
-      <li class="<% if controller.controller_name == 'work'%>selected_page<% end %>">
-        <a href="/work">Work</a>
-      </li>
       <li class="<% if controller.controller_name == 'services'%>selected_page<% end %>">
         <a href="/services">Services</a>
       </li>
+      <li class="<% if controller.controller_name == 'screencast'%>selected_page<% end %>">
+        <a href="/screencasts">Screencasts</a>
+      </li>
+      <!--
+      <li class="<%# if controller.controller_name == 'work'%>selected_page<%# end %>">
+        <a href="/work">Work</a>
+      </li>
+      -->
       <li class="<% if controller.controller_name == 'contact'%>selected_page<% end %>">
         <a href="/contacts/new">Contact</a>
       </li>
