@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render 'layouts/work_head_content' %>
+</head>
+
+<body>
+    <%= render :partial => 'layouts/header' %>
+    
+    <%= yield %>
+    
+    <%= render :partial => 'home/footer' %>
+
+    <script type="text/javascript">
+		  Cufon.replace('h1');
+    	Cufon.replace('h2');
+		  Cufon.replace('');
+    </script>
+    
+</body>
+</html>

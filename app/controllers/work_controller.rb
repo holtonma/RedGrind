@@ -1,6 +1,6 @@
 class WorkController < ApplicationController
   
-  layout 'application'
+  layout 'work'
   
   def index
   end

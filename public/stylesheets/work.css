@@ -1,0 +1,248 @@
+/* @group Footer */
+
+footer {
+	margin: 0 auto;
+	width: 1080px;
+	clear: both;
+	border-top: 3px solid #dad9d0;
+	padding-top: 13px;
+	padding-bottom: 40px;
+}
+
+footer p {
+	float: left;
+}
+
+footer small { 
+	font-size: 11px;
+	color: #9d9d97;
+}
+
+footer small a { 
+	color: #848484; 
+	font-weight: normal; 
+	padding-bottom: 1px;
+}
+
+footer small a:hover { 
+	color: #696969; 
+	text-decoration: underline;
+	
+}
+
+footer ul {
+	float: right;
+}
+
+footer ul li {
+	float: left;
+	padding-left: 25px;	
+}
+
+footer ul li a { 
+	color: #9d9d97; 
+	font-size: 12px;
+	display: block;
+}
+
+footer ul li a:hover { 
+	color: #848484; 
+}
+
+footer ul li a#footerrss { 
+	padding-left: 23px;
+}
+
+footer ul li a#footerdribbble { 
+	padding-left: 23px;
+}
+
+footer ul li a#footertwitter { 
+	padding-left: 23px;
+}
+
+/* @end */
+
+/* @group Clearfix */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html { 
+	/*background: url(../img/sitebg.jpg) repeat;*/
+	-webkit-font-smoothing: antialiased;	
+}
+
+body {
+	color: #8a8a8a;
+  font: 13px/19px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; 
+	/*background: url(../img/subbg.jpg) repeat-x; */
+}
+
+a { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #6b6b67;
+}
+
+a:active {
+	position: relative;
+	top: 1px;
+}
+
+
+#headerstretch{
+	height: 224px;
+	position: relative;
+	z-index: 1;
+}
+
+/* @end */
+
+/* @group Main Content */
+
+#contentstretch {
+	background: url(../img/subtopgradient.jpg) repeat-x;
+	padding: 0px 25px;
+}
+
+#maincontent {
+	position: relative;
+	top: 60px;
+	width: 1080px;
+	margin: 0 auto;
+
+}
+
+/* @group Entries */
+
+#maincontent article {
+	border-top: 1px dashed #9a9995;
+	padding-top: 30px;
+	clear: both;
+	margin-bottom: 27px;
+	position: relative;
+}
+
+section.iteminfo {
+	float: left;
+	width: 285px;
+	}
+
+section.iteminfo h2{
+	padding-top: 3px;
+	color: #525250; 
+	font: 25px "ClarendonRoman", Georgia, Times, serif;
+	margin-bottom: -2px;
+}
+
+span.tasks {
+	font-style: italic;
+	color: #536669;
+}
+
+.projectdescription p{
+	margin-bottom: 12px;
+	line-height: 18px;
+}
+
+.projectdescription p a {
+	font-weight: normal;
+	font-style: normal;
+	color: #5c5c58;
+}
+
+.projectdescription p a:hover {
+	color: #8a8a8a;
+	text-decoration: underline;
+}
+
+blockquote {
+	margin: 22px 0px 20px 0px;
+	font: italic 15px/20px Georgia, "Times New Roman", Times, serif;
+	color: #924735;
+	text-indent: -3px;
+	padding-bottom: 22px;
+	border-bottom: 1px solid #bdbcb7;
+}
+
+blockquote p.quotename, p.quotetitle{
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-style: normal;
+	line-height: 16px;
+	text-indent: 0px;
+}
+
+blockquote p.quotename {
+	margin-top: 12px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #5a5a5a;
+}
+
+blockquote p.quotetitle {
+	font-size: 13px;
+	color: #5a5a5a;
+}
+
+.browser {
+	float: right;
+	margin-bottom: 10px;
+}
+.topbar {
+	width: 700px;
+	height: 21px;
+}
+
+.topbar h3{
+	text-transform: uppercase;
+	text-align: center;
+	font: normal 11px "AvenirBold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #454545;
+	padding-top: 6px;
+	text-shadow: #cdcdcd 1px 1px 0;
+}
+
+span.bottombar {
+	display: block;
+	width: 700px;
+	height: 20px;
+	margin-top: -5px;
+}
+
+/* @end */
+
+/* @end */
+
