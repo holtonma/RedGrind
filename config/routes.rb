@@ -1,4 +1,6 @@
 Redgrind::Application.routes.draw do
+  resources :line_items
+
   resources :contacts
   resources :uploads
   
