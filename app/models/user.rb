@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   # accessible attributes for your model
   attr_accessible :email, :password, :password_confirmation #:remember_me
   
-  named_scope :with_role, lambda { |role| {:conditions => "roles_mask & #{2**ROLES.index(role.to_s)} > 0 "}}
+  scope :with_role, lambda { |role| {:conditions => "roles_mask & #{2**ROLES.index(role.to_s)} > 0 "}}
   
   ROLES = %w[admin author]
   
