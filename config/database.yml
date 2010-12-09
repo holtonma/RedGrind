@@ -16,8 +16,8 @@ test:
   encoding: unicode
   database: redgrind_test
   pool: 5
-  username: postgres
-  password: scramjet
+  #username: postgres
+  #password: scramjet
 
 production:
   adapter: postgresql
